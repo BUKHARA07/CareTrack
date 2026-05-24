@@ -2208,7 +2208,7 @@ footer ul a {
 }
 
 .dashLogo {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 11px;
   min-width: 0;
@@ -2430,6 +2430,12 @@ footer ul a {
 
 .mobileSidebarActions {
   display: none;
+}
+
+@media (max-width: 900px) {
+  .dashLogo {
+    display: flex !important;
+  }
 }
 
 .dashPanelBtn,
