@@ -1,0 +1,626 @@
+﻿Table of contents
+ACTIVITY 1            Learning Aim A. A.P1, A.M1, A.D13
+Introduction3
+A.P1 - Compare the full stack tools and technologies used in two different healthcare management systems4
+1.Dashboard - OpenMRS4
+1.1Dashboard – OpenEMR4
+2.Comparison of Design and Features5
+3.User Interface &amp; Design6
+A.M1 - Analyse full stack development tools and technologies9
+1.Database9
+2.Backend9
+3.Frontend10
+A.D1 - Evaluate how full stack development tools and technologies are applied11
+1. Evaluation of OpenMRS11
+2. Evaluation of OpenEMR:11
+Conclusion12
+ACTIVITY 2                Learning Aim B. B.P213
+B.P2 - Produce full stack designs for the MRMS that meet CareTrack Clinic’s client requirements, including ERD, data dictionary, wireframes and technical documentation13
+Technical Database Documentation17
+1. Architectural Notation &amp; Key Constraints17
+2. Breakdown of System Relationships18
+Data Dictionary19
+ACTIVITY 3           Learning Aim B. B.P3, B.M221
+B.P3 - Review the MRMS design proposals21
+B.M2 - Justify design decisions for the MRMS, explaining how they meet user needs and are fit for purpose in a clinical environment.23
+Home page23
+Dashboard23
+Patient/Doctor/Diagnose pages24
+Logic24
+ACTIVITY 4          learning aim C. C.P4, C.P5, C.M326
+C.P4, C.P5 - Produce a full stack MRMS for an intended audience and test it for functionality, compatibility, usability and purpose.26
+Fullstack technologies used:26
+Security &amp; Authentication28
+Role-Based Access Control System28
+Dashboard28
+Doctor Page29
+Patient Page30
+Diagnoses page30
+Functionality Testing:31
+Summary:32
+Compatibility testing33
+Responsiveness34
+C.M3 - Optimize the MRMS to meet CareTrack Clinic’s client requirements based on testing results and user feedback.37
+User Feedback, Fixes and Optimizations37
+ACTIVITY 5      learning aim B and C. C.P6, BC.D2, BC.D340
+C.P6 – Review the extent to which the MRMS meets CareTrack Clinic’s client requirements40
+BC.D2 – Evaluate design decisions and the optimised MRMS against client requirements (user needs and fitness for purpose)40
+BC.D3 – Individual responsibility, creativity and effective self-management in design, development and review41
+Conclusion42
+ACTIVITY 1        Learning Aim A. A.P1, A.M1, A.D1
+Introduction
+This report has been produced as part of Activity 1 for Unit 25: Full Stack Development. The purpose of this activity is to research and compare two existing healthcare or clinic management systems in order to inform the design and development of the Medical Record Management System (MRMS) for CareTrack Clinic. The research will consider system design, key features, full stack development principles, and how effectively each system serves the needs of its intended users.
+CareTrack Clinic is a mid-sized private medical centre that currently operates using paper-based records and disconnected spreadsheets. The clinic requires a modern web-based system to manage doctor profiles, patient records, and disease/diagnosis histories. Researching existing systems allows us to identify industry best practices, understand the expectations of clinical users, and ensure that our own solution is appropriate and competitive.
+The two systems selected for comparison are:
+OpenMRS – a widely used commercial healthcare management platform.
+OpenEMR – a leading open-source electronic medical records (EMR) system.
+These systems were selected because they both operate in a similar domain to the MRMS, supporting patient record management, doctor profiles, appointment scheduling, and access control — features that closely align with CareTrack Clinic's requirements.
+Feature / UI Element
+System A (e.g., OpenMRS)
+System B (e.g., Athenahealth)
+Patient Record Management
+Highly customizable; uses a concept-based data model for tracking clinical histories.
+Streamlined, chart-centric view with native billing integration.
+Role-Based Access Control
+Granular, permission-based roles configurable by system administrators.
+Pre-defined clinical, administrative, and financial billing roles.
+Search &amp; Filtering
+Instant search by patient ID or name; modular filtering capabilities.
+Advanced multi-parameter search (DOB, insurance ID, phone number).
+User Interface (UI) Design
+Often utilitarian, dense text layout, prioritizes data entry speed over modern aesthetics.
+Modern, clean dashboard-driven layout with intuitive navigation menus.
+A.P1 - Compare the full stack tools and technologies used in two different healthcare management systems
+Dashboard - OpenMRS
+OpenMRS is founded on the principles of openness and sharing of ideas, software and strategies for deployment and use. The system is designed to be usable in very resource poor environments and can be modified with the addition of new data items, forms and reports without programming. It is intended as a platform that many organizations can adopt and modify avoiding the need to develop a system from scratch.
+Figure: OpenMRS– Dashboard Interface
+Dashboard – OpenEMR
+OpenEMR is the world's most widely used open-source electronic health record (EHR) and medical practice management system, ONC Certified for compliance with US healthcare regulations and deployed by thousands of clinics globally. It provides comprehensive patient demographics management, ICD-10 diagnosis coding and disease history tracking, doctor and staff profile management with granular role-based permissions, appointment scheduling, billing, prescriptions, and lab results. Unlike Practo, OpenEMR is self-hosted — clinics install and manage the software on their own servers — giving them full ownership and control of all patient data.
+Figure: OpenERS– Dashboard Interface
+Comparison of Design and Features
+The table below provides a structured comparison of key features and design aspects of OpenMRS and OpenEMR. This comparison is used to identify the strengths and weaknesses of each system in relation to the requirements of CareTrack Clinic.
+Feature/Design Area
+OpenMRS
+OpenEMR
+Primary Purpose
+Medical record management for clinics and healthcare organisations
+Complete electronic medical record and practice management system
+Target Users
+Clinics, hospitals, healthcare organisations
+Clinics, private practices, hospitals
+User Interface Design
+Simple and modular interface focused on accessibility
+More traditional interface with many integrated management tools
+Ease of Navigation
+Easy to navigate with clear patient-focused layouts
+Can feel crowded due to large number of features
+Patient Record Management
+Strong patient history and diagnosis tracking
+Strong patient record and appointment management
+Doctor Management
+Supports doctor and clinician profiles
+Supports provider scheduling and staff management
+Diagnosis/Disease Tracking
+Efficient diagnosis and medical history tracking
+Includes diagnosis tracking with billing integration
+Appointment Scheduling
+Basic scheduling support
+Advanced appointment and calendar system
+Billing Features
+Limited billing functionality
+Includes integrated billing and insurance management
+Role-Based Access Control
+Yes – supports different staff permissions
+Yes – supports administrators, clinicians and staff roles
+Search and Filtering
+Fast patient and record searching
+Advanced search for patients, appointments and billing
+Database Structure
+Relational database structure suitable for linked medical data
+Relational database with extensive healthcare data support
+Customization
+Highly customizable through modules
+Customizable but more complex to configure
+Scalability
+Suitable for small to medium healthcare organizations
+Suitable for medium to large healthcare organizations
+Open Source
+Yes
+Yes
+Security Features
+User authentication and permission management
+Authentication, access control and HIPAA compliance features
+Mobile/Browser Support
+Web-based and accessible through browsers
+Web-based with multi-browser support
+Complexity Level
+Medium
+Medium to High
+Best Advantage
+Flexible and lightweight for healthcare systems
+Combines EMR features with practice management tools
+Main Weakness
+Some advanced features require additional modules
+Interface can appear outdated and complicated
+User Interface &amp; Design
+OpenMRS – Laboratory page
+OpenMRS features a modern, responsive user interface that prioritises ease of use. The dashboard presents key clinic metrics, upcoming appointments, and quick action buttons in a clean card-based layout. Navigation is straightforward, with clearly labelled sections for Patients, Appointments, Billing, and Reports. Colour coding and iconography guide users efficiently through tasks, which is particularly important in a busy clinical setting where staff may be completing tasks quickly under pressure.
+OpenEMR - Laboratory page
+OpenEMR's interface is more functional and information-dense. The system displays a significant amount of clinical data on-screen at once, which experienced clinical users may find efficient, but which can overwhelm new users. The interface has improved in recent versions with a Bootstrap-based theme, but still lacks the polished visual design of commercial alternatives like Practo. Navigation is menu-driven, with separate sections for Calendar, Patient Records, Billing, and Administration.
+OpenMRS – Search bar
+OpenMRS prioritises simplicity, accessibility and user experience, making it more appropriate for fast-paced clinical environments.
+OpenEMR – Search bar
+OpenEMR prioritises detailed management features and advanced controls, making it powerful but more complex.
+A.M1 - Analyse full stack development tools and technologies
+To build an efficient, secure, and high-performance Medical Record Management System (MRMS), developers must strategically select and configure the entire full-stack ecosystem. Healthcare environments present a unique challenge: they require instant data retrieval across complex, interconnected datasets (such as linking doctors, patients, and continuous clinical histories) while maintaining strict security boundaries and high application uptime. 
+An analysis of the full-stack architectural choices in OpenMRS and OpenEMR demonstrates how backend, frontend, and database layers harmonize to meet these rigorous demands.
+Database
+OpenMRS (Java / MySQL or PostgreSQL): OpenMRS utilizes a highly normalized, concept-driven relational model. To optimize performance and abstract complex SQL queries, it implements Hibernate as its Object-Relational Mapping (ORM) framework. Hibernate acts as the bridge between the Java backend and the relational database. It ensures strict data integrity—preventing orphaned records if a diagnosis is modified or a patient is reassigned. To maintain high performance during heavy concurrent usage, OpenMRS leverages Hibernate’s second-level caching. This minimizes direct database hits for frequently accessed data (such as standard ICD-10 code lists or doctor specialty configurations), drastically reducing server latency. 
+OpenEMR (PHP / MySQL or MariaDB): OpenEMR communicates directly with MySQL or MariaDB databases using abstract data layers (like ADOdb or PDO). Unlike OpenMRS's abstract concept design, OpenEMR uses a more direct, structured relational schema where tables explicitly mirror real-world entities (e.g., patient_data, users, lists for diagnoses). To handle the high-throughput demands of a busy clinic, OpenEMR relies heavily on database indexing on primary and foreign keys (such as linking a provider's ID to patient charts). This ensures that when a clinician loads a comprehensive patient profile, the database executes rapid pointer lookups rather than performing exhaustive, resource-heavy full-table scans.
+Backend
+OpenMRS (Java Spring Framework): OpenMRS relies on a enterprise-grade Java Spring backend architecture. This multi-layered structure separates the controller, service, and data access layers. High performance is maintained through Spring's robust multithreading capabilities, allowing the server to handle asynchronous requests simultaneously (e.g., a receptionist registering a new patient while a clinician updates a disease record) without bottlenecking the processor. Furthermore, its backend enforces security via Aspect-Oriented Programming (AOP), injecting interceptors that evaluate a user's session role (Administrator vs. Clinician) at the service level before any data is processed or transmitted.
+OpenEMR (PHP Engine): OpenEMR utilizes a server-side PHP architecture. Modern iterations of OpenEMR have optimized performance by migrating to PHP 8.x, which includes OPcache (Optimizer Plus). OPcache improves performance by storing precompiled script bytecode in the server’s shared memory, eliminating the need for PHP to load and parse scripts on every single page request. This makes page rendering and API execution significantly faster. For role-based security, OpenEMR processes an internal Access Control List (ACL) engine during the server-side compilation phase, selectively executing and injecting modules based on whether the verified user session matches administrative or clinical permissions.
+Frontend
+OpenMRS (Modern Frontend 3.0 - React / Microfrontends): In its modern architecture, OpenMRS has decoupled its frontend from the Java backend entirely, utilizing a React-based microfrontend architecture communicating via a headless RESTful API. This full-stack decoupling dramatically optimizes client-side performance. React's Virtual DOM updates only the modified elements of a webpage (such as appending a single new diagnosis entry) without forcing a full browser refresh. Data fetching is optimized through state-management libraries and hooks that cache API responses client-side, meaning a clinician can switch between a patient's diagnosis history and a doctor's schedule instantly without sending repetitive, redundant fetch requests back to the server.
+OpenEMR (Hybrid Twig, JavaScript, and Bootstrap): OpenEMR operates on a more traditional server-side rendering (SSR) model, dynamically assembling HTML templates on the server before sending them to the browser, styled with Bootstrap. While SSR can occasionally result in full-page reloads when navigating across completely different modules, OpenEMR mitigates performance lags by integrating AJAX (Asynchronous JavaScript and XML) for intensive interactive components, such as its calendar scheduling and live search/filter fields. By utilizing asynchronous background requests, the client browser can query the PHP backend for updated doctor schedules or filtered patient lists dynamically, updating the active view seamlessly without disrupting the user's workflow. 
+A.D1 - Evaluate how full stack development tools and technologies are applied
+Evaluating the application of full-stack development tools in healthcare IT requires looking beyond mere technical capability; it demands an assessment of how effectively these technologies serve their non-technical endpoints: clinical safety, administrative throughput, data compliance, and organizational scalability.
+By critically evaluating the real-world deployment models of OpenMRS and OpenEMR, we can determine the institutional trade-offs inherent to different full-stack methodologies and evaluate their suitability for a mid-sized facility like CareTrack Clinic.
+1. Evaluation of OpenMRS
+The core strength of OpenMRS lies in its highly normalized, "concept-driven" data layer managed via Hibernate.
+The Positives: From an organizational and clinical perspective, this full-stack choice is highly effective. Because medical data is abstractly mapped, the system can adapt to any medical specialty (from general practice to cardiology or neurology) without requiring structural database migrations. New diagnosis criteria, custom symptoms, or regional ICD codes can be dynamically injected into the database layer via the user interface. Furthermore, its modern decoupled React frontend provides a responsive, desktop-like user experience that minimizes cognitive fatigue for clinicians documenting active patient encounters. 
+The Negatives: This level of abstraction introduces significant architectural complexity. Because database records are highly split across "concepts" rather than structured in simple flat tables, executing a comprehensive patient profile query requires complex SQL JOIN operations across dozens of backend relational tables. If the system is not heavily optimized with advanced Hibernate caching, this can bottleneck server CPU performance during peak clinic hours, leading to sluggish page reloads. Organizationally, this means OpenMRS requires dedicated, specialized database administrators to maintain—a massive financial overhead for a mid-sized private medical centre. 
+2. Evaluation of OpenEMR:
+OpenEMR represents a traditional, tightly integrated server-side rendered (SSR) full-stack environment built on PHP and MySQL.
+The Positives: OpenEMR excels in immediate operational accessibility and deployability. Because PHP compiles entirely server-side and outputs standard Bootstrap-styled HTML to the browser, the client-side system footprint is exceptionally lightweight. It runs seamlessly on legacy hardware or low-spec clinic computers, minimizing the need for expensive hardware upgrades. Its direct database schema (where a table explicitly represents patient_data) makes basic data filtering, data seeding, and custom reporting incredibly straightforward for local IT staff. This direct architecture easily satisfies basic clinical requirements like registering new patients and tracking histories without lag. 
+The Negatives: The monolithic nature of a traditional PHP/Bootstrap stack introduces severe usability limits in high-tempo medical environments. Because the architecture relies heavily on server-side rendering, navigating between distinct system modules (e.g., jumping from a doctor's schedule to an extensive disease log) can trigger full browser refreshes. This disrupts clinical workflows compared to the instantaneous transitions of single-page applications (SPAs). Furthermore, scaling and maintaining a legacy monolithic codebase introduces significant technical debt; changes made to a UI template run the risk of inadvertently breaking tightly coupled backend database operations if strict testing boundaries are not continuously enforced.
+Conclusion
+This evaluation demonstrates that an optimal full-stack solution for a mid-sized practice must synthesize the core strengths of both systems while actively eliminating their engineering drawbacks.
+Why Next.js Explains the Paradigm Shift: My choice to utilize Next.js for the CareTrack Clinic MRMS directly resolves the tensions uncovered in this evaluation. Next.js bridges the gap between OpenMRS’s frontend fluidity and OpenEMR’s lightweight server-side efficiency.
+By leveraging React Server Components (RSC) alongside built-in API routes, the system achieves rapid initialization by handling heavy relational lookups (Doctors to Patients to Diagnoses) directly on the server. It then pipes data to the client as a high-performance single-page application. 
+This full-stack synergy eliminates the full-page reloads found in OpenEMR, provides the client-side speed of OpenMRS, and avoids the severe server-side infrastructure overhead of a Java Spring Enterprise system. This delivers a robust, secure, and responsive system tailored perfectly to the operational constraints of CareTrack Clinic. 
+ACTIVITY 2          Learning Aim B. B.P2
+B.P2 - Produce full stack designs for the MRMS that meet CareTrack Clinic’s client requirements, including ERD, data dictionary, wireframes and technical documentation
+CareTrack  - Home page
+The homepage design for the CareTrack Clinic Medical Record Management System (MRMS) was created to provide a modern, professional and user-friendly interface suitable for healthcare environments. The design focuses on simplicity, accessibility and efficient navigation to ensure that clinical staff, administrators and receptionists can quickly access important system features.
+CareTrack – Authentication pages (sign-in / sign-up)
+The Sign In page for the CareTrack Clinic MRMS was designed to provide secure and efficient access to the system for authorised healthcare staff. The page focuses on simplicity, accessibility and ease of use to ensure that users can quickly log into the system during busy clinical operations.
+The Sign Up page, also referred to as the “Request Access” page, was designed to allow authorised staff members to request access to the CareTrack Clinic MRMS. The page focuses on collecting essential user information while maintaining a simple and professional interface.
+CareTrack – Dashboard page
+The dashboard page was designed to provide users with quick access to important system information and navigation tools. The layout includes summary cards, recent patient activity, doctor information and diagnosis statistics to help staff manage clinical operations efficiently. The interface uses a clean and organised design to reduce clutter and improve usability in busy healthcare environments. Role-based dashboard sections were also included so that administrators, clinicians and receptionists only see information relevant to their responsibilities.
+CareTrack – Patient Profile page
+The Patient Profile page was designed to display complete patient information in a clear and organised layout. The page includes personal details, assigned doctor information and a full history of disease and diagnosis records linked to the patient. Search and update functions were included to allow clinicians and administrators to manage records efficiently. The design uses section-based layouts and clear typography to improve readability and help healthcare staff access important medical information quickly.
+Technical Database Documentation
+The relational database schema for the CareTrack Clinic Medical Record Management System (MRMS) has been designed using an entity-relationship framework to enforce strict data integrity, optimal relational indexing, and role-based access boundaries. 
+The diagram below maps out the four primary data collections/tables: User (for system authorization), Doctor, Patient, and Disease.
+1. Architectural Notation &amp; Key Constraints
+The ERD utilizes Crow’s Foot notation to illustrate relational configurations and cardinalities:
+PK (Primary Key): Unique identifiers assigned to enforce entity integrity.
+FK (Foreign Key): Fields used to map relationships between separate data tables, enforcing referential integrity.
+UK (Unique Key): Enforces fields that cannot contain duplicate records across different rows (e.g., system user email addresses).
+2. Breakdown of System Relationships
+The database schema strictly implements the structural business rules outlined by the CareTrack Clinic assignment parameters: 
+Doctor to Patient (One-to-Many): A Doctor record can be linked to multiple Patient charts over time ("has many"). Conversely, each specific Patient profile is explicitly assigned to exactly one primary care Doctor via the doctorId foreign key constraint ("belongs to"). 
+Patient to Disease/Diagnosis (One-to-Many): A Patient can compile multiple diagnostic events throughout their clinical timeline ("has many"). Each specific Disease record represents an isolated clinical entry that maps exclusively to a single Patient via the patientId foreign key constraint. 
+User (Isolated Session Table): The User table handles localized system credentials and authentication properties. It operates independently from direct medical charting links to maintain an abstracted layer for role-based permissions (role: Administrator, Clinician, Receptionist).
+Data Dictionary
+User (Authentication &amp; Role Management)
+Field Name
+Data Type
+Constraints
+Description / Purpose
+id
+String
+PK, Required
+Unique identifier for the system user account.
+name
+String
+Required
+Full name of the employee.
+email
+String
+UK, Required
+Unique login email; prevents duplicate accounts.
+password
+String
+Required
+Securely hashed password credential string.
+role
+String
+Default: 'Receptionist'
+Determines access permissions (Admin, Clinician, Receptionist).
+createdAt
+DateTime
+Required
+System-generated timestamp of account generation.
+updatedAt
+DateTime
+Required
+Auto-updated timestamp logging latest record alterations.
+Doctor (Medical Providers)
+Field Name
+Data Type
+Constraints
+Description / Purpose
+id
+String
+PK, Required
+Unique identifier for the medical professional.
+name
+String
+Required
+Full name of the medical provider.
+specialty
+String
+Required
+Medical specialization (e.g., Cardiology, Neurology).
+department
+String
+Required
+Assigned physical clinical department.
+email
+String
+Required
+Professional contact email address.
+phone
+String
+Required
+Direct workspace telephone number.
+createdAt
+DateTime
+Required
+Registration timestamp of the doctor profile in the system.
+updatedAt
+DateTime
+Required
+Live tracking timestamp for profile modifications.
+Patient (Clinical Demographics)
+Field Name
+Data Type
+Constraints
+Description / Purpose
+id
+String
+PK, Required
+Unique identifier for the patient chart.
+firstName
+String
+Required
+Legal first name of the patient.
+lastName
+String
+Required
+Legal last name/surname of the patient.
+dateOfBirth
+DateTime
+Required
+Patient date of birth for age verification and identification.
+email
+String
+Required
+Personal contact email for patient communications.
+phone
+String
+Required
+Primary telephone contact number.
+address
+String
+Required
+Residential billing and mailing address.
+doctorId
+String
+FK, Required
+Maps the patient to their assigned primary care Doctor.
+createdAt
+DateTime
+Required
+Timestamp of initial clinic system registration.
+updatedAt
+DateTime
+Required
+Timestamp tracking clinical chart updates.
+Disease (Diagnoses &amp; Medical Records)
+Field Name
+Data Type
+Constraints
+Description / Purpose
+id
+String
+PK, Required
+Unique identifier for an isolated medical diagnosis record.
+icdCode
+String
+Required
+Official alphanumeric international classification code (ICD-10).
+description
+String
+Required
+Clinical diagnostic narrative notes written by the clinician.
+severity
+String
+Required
+Classification layer of disease state (e.g., Low, Medium, High).
+patientId
+String
+FK, Required
+Maps the specific diagnosis to the corresponding Patient record.
+createdAt
+DateTime
+Required
+Entry timestamp marking exactly when the illness was diagnosed.
+updatedAt
+DateTime
+Required
+Timestamp tracking modifications to the clinical entry.
+ACTIVITY 3     Learning Aim B. B.P3, B.M2
+B.P3 - Review the MRMS design proposals
+From: Muhammadiyor (classmate)
+Feedback: Buttons are too small for hero page, make them bigger and increase font size a bit
+From: Usanov Aziz (classmate)
+Feedback: Sidebar in the dashboard is too dark and doesn’t match the home page colors. Even though I have no knowledge in designing, it looks bad to me.
+From: Bexruz (classmate)
+Feedback: I think the overall design of the website looks good, I don’t see any problems with the UI. Looks perfect to me.
+B.M2 - Justify design decisions for the MRMS, explaining how they meet user needs and are fit for purpose in a clinical environment.
+The design of the CareTrack Clinic Medical Record Management System (MRMS) was created to meet the needs of clinical staff, administrators and receptionists while ensuring the system is suitable for use in a professional healthcare environment. Several design decisions were made to improve usability, efficiency, security and accessibility.
+Home page
+Justification: I wasn’t supposed to make home page for this project. But I thought it would be better to tell incoming users about the company and websites goal to further improve UX.
+The homepage was designed with simple navigation and quick-access buttons such as “Staff Sign In” and “Request Access”. This allows users to access the system efficiently without unnecessary steps. Healthcare-themed colours such as green and white were chosen because they create a professional appearance associated with healthcare and trustworthiness.
+Dashboard
+The dashboard design was structured to display important information immediately after login. Summary cards, recent patient activity and quick navigation tools were included to help users complete tasks faster. Role-based dashboard sections were implemented so that each user only sees features relevant to their responsibilities. This improves usability and reduces unnecessary information for staff members.
+Patient/Doctor/Diagnose pages
+The Patient Profile page was designed using section-based layouts to improve readability and organisation of medical data. Patient details, assigned doctor information and diagnosis history are grouped clearly so clinicians can access important medical information quickly. This design supports efficient decision-making during patient treatment and reduces the risk of overlooking critical information.
+Logic
+Role-based access control was included as an important security feature. Administrators have full system access, clinicians can manage patient and diagnosis information, and receptionists can register patients and view schedules. This design decision helps protect sensitive medical records and ensures users can only access information relevant to their role within the clinic.
+A relational database structure was selected because the MRMS contains connected data relationships such as:
+one doctor having many patients 
+one patient having many diagnoses 
+This design improves data organisation, consistency and scalability while reducing duplicate records.
+Responsive design principles were also used to ensure compatibility across desktops, tablets and mobile devices. This allows staff to access the system from different devices within the clinic environment.
+Research into systems such as OpenMRS and OpenEMR influenced several design choices. The final MRMS combines the clean and user-friendly interface style of OpenMRS with some of the detailed management functionality found in OpenEMR.
+ACTIVITY 4     learning aim C. C.P4, C.P5, C.M3
+C.P4, C.P5 - Produce a full stack MRMS for an intended audience and test it for functionality, compatibility, usability and purpose.
+The CareTrack Clinic Medical Record Management System (MRMS) was developed as a full stack web application designed for administrators, clinicians and receptionists. The system allows users to manage doctors, patients and disease/diagnosis records through a secure and responsive interface. The application was developed using full stack technologies to ensure efficient data management, role-based access control and relational database functionality.
+Fullstack technologies used:
+Technology / Library
+Category
+Version / Type
+Purpose &amp; Role in Medicore
+Next.js
+Fullstack Web Framework
+16.2.6 (App Router)
+Serves as the core runtime. It handles client-side rendering, Server Components for performance, route handlers for internal backend APIs, and React-based routing (e.g., dynamic dashboards, patient routes, auth).
+React
+Front-End UI Library
+19.2.4
+The UI component model powering the frontend. Uses modern React features (such as Server Components and hydration enhancements) for building fast, interactive medical forms and dashboards.
+TypeScript
+Language / Type Safety
+5.x
+Provides strict, compile-time static typing across front-end components, back-end API routes, and database interactions, reducing runtime errors and improving code maintainability.
+Prisma ORM
+Object-Relational Mapper
+6.19.2
+Translates database schemas into clean, type-safe TypeScript code. Handles connection management, automated client generation (@prisma/client), and model relations.
+MongoDB
+Database (NoSQL)
+Configured in schema.prisma
+Stores all persistent application data, including User collections, Doctor information, Patient demographic logs, and Disease clinical entries.
+NextAuth.js
+Authentication
+5.0.0-beta.31 (Auth.js)
+Implements secure, session-based authentication using stateless JSON Web Tokens (JWT). Restricts unauthorized users from accessing the system and controls paths like /dashboard.
+Tailwind CSS
+Styling Engine
+4.x
+Powering the entire visual system of the app. It uses the next-generation CSS-first engine of Tailwind v4 (with PostCSS integration) to style custom dashboards, responsive tables, forms, and alerts.
+bcryptjs
+Security &amp; Cryptography
+3.0.3
+Used to securely hash user passwords using standard cryptographic algorithms during registration (/sign-up), and verifies password matches securely during login (/sign-in).
+Security &amp; Authentication
+Bcrypt-Hashed Passwords: During registration (/sign-up), credentials are computationally hashed using bcryptjs before insertion into the MongoDB database, securing user passwords against database leaks.
+JWT Session Persistence: Powered by NextAuth.js (Auth.js v5), utilizing JSON Web Tokens (JWT) for secure, stateless user sessions that persist across routes without overloading the database.
+Role Ingestion: Users are dynamically assigned clinical roles (defaulting to Receptionist) that are embedded directly in the JWT payload for client and server-side authorization.
+Role-Based Access Control System
+The application enforces strict security bounds across its three user roles: Administrator, Clinician, and Receptionist. This prevents unauthorized personnel from accessing sensitive medical files or modifying system profiles.
+Administrator:
+Full CRUD (Create, Read, Update, Delete) permissions on Doctors, Patients, and Disease records.
+Clinician:
+Full view access to doctors and patients.
+Permission to Create &amp; Edit Patient Diagnoses (Diseases).
+Permission to Update Patient demographics, but cannot register new patients or manage doctor rosters.
+Receptionist:
+Permission to Register new patients and view active doctors/patients.
+Strictly Blocked from viewing, adding, or modifying clinical disease diagnosis records (respecting patient confidentiality).
+Dashboard
+Real-time Live Analytics: The dashboard page aggregates operational metrics directly from MongoDB via Prisma, including:
+Total counts of active Doctors, Patients, and Diagnoses.
+Today's and this week's new patient registration rates.
+Load Factor Calculator: Computes a dynamic pressure indicator showing the average number of patients per doctor (patientCount / doctorCount), alerting staff if the clinic is under high pressure (load factor &gt; 18).
+Personalized Interface: Features time-of-day dynamic greetings (e.g., "Good morning, Sarah") and displays the active role status.
+Adaptive Panels: Displays a "Quick Actions" panel and "Recent Registrations" feed that dynamically hide options the current logged-in role is not permitted to perform.
+Doctor Page
+Full-Text Multi-Field Search: Real-time searching of doctor profiles by Name, Specialty, Department, or Email with case-insensitive filtering.
+Department Filtering: A dynamic dropdown that auto-aggregates existing departments in the database to filter specialized medical staff.
+Workload Aggregation: Displays the active patient count assigned to each doctor using Prisma's selective relations (count.patients).
+Profile Management: Secure CRUD portals allowing administrators to add new practitioners, modify roles, or delete outdated doctor records.
+Patient Page
+Demographic Logs: Registers patient records with essential attributes like First Name, Last Name, Date of Birth, Email, Phone, Address, and Primary Care Doctor.
+Search &amp; Filters: Users can search the registry by name or email, or filter the directory to view all patients assigned to a specific physician.
+Audit Tracks: Automatic timestamp tracking (createdAt and updatedAt) showing precisely when a patient was enrolled.
+Diagnoses page
+Standardized ICD System: Supports entry of official ICD Codes (International Classification of Diseases) linked to patient files.
+Severity Badging: Allows categorizing diagnoses into distinct severity tiers (Low, Medium, High), dynamically rendering visually distinct color-coded badges (Tailwind utility-styled) based on the severity level.
+Relational Mapping: Seamless database linking where each disease instance maps to exactly one Patient and references the diagnosis date.
+Functionality Testing:
+1. Testing Objectives
+The objective of this testing phase is to validate that the MediCore Medical Record Management System (MRMS) functions in compliance with its functional requirements, database integrity schemas, and role-based security boundaries. Specifically, testing focused on:
+User Authentication &amp; Cryptographic Integrity: Verifying secure registration, bcrypt password hashing, and NextAuth JWT session management.
+Role-Based Access Control (RBAC): Enforcing strict separation of capabilities among Administrators, Clinicians, and Receptionists.
+Data Operations (CRUD): Verifying full database operations for Doctors, Patients, and Diagnoses via Prisma ORM to MongoDB.
+Search and Query Performance: Ensuring case-insensitive keyword filtering and relational counters are accurately calculated.
+2. System Test Matrix
+Test ID
+Feature Under Test
+Input / Test Data
+Execution Steps
+Expected Result
+Actual Result
+Status
+TC-001
+User Registration &amp; Cryptographic Hashing
+Name: Alice ReceptionEmail: alice@medicore.comPassword: SecurePass123
+1. Navigate to /sign-up.2. Fill in credentials and submit.3. Inspect the database record.
+User account is created. The password stored in the MongoDB collection must be fully hashed via bcryptjs (no plain text).
+Account created. Password encrypted in database under $2a$ salt.
+PASS
+TC-002
+Role-Based Session Hydration
+Credentials: alice@medicore.com / SecurePass123
+1. Navigate to /sign-in.2. Submit valid credentials.
+Session JWT is created. User is redirected to /dashboard. Active role is visible as Receptionist.
+Session successfully initiated. Dashboard displays: "Your active role is Receptionist".
+PASS
+TC-003
+RBAC Authorization Security (Receptionist Restrictions)
+Role: ReceptionistURL: /dashboard/diseases
+1. Log in as a Receptionist.2. Manually enter the /dashboard/diseases path in browser address bar.
+Next.js server checks middleware permissions, blocks access, and redirects the user back to the /dashboard home.
+Blocked. User is safely redirected to /dashboard home.
+PASS
+TC-004
+Patient Enrollment Workflow
+Role: ReceptionistData: John Doe, DOB: 1985-05-12, assigned to Dr. Smith.
+1. Click "+ Register patient".2. Complete patient demographics.3. Submit the registration form.
+Patient record is saved in MongoDB. The new patient immediately appears on the Dashboard under "Recent patient registrations".
+Patient successfully enrolled. Visible instantly on dashboard feed.
+PASS
+TC-005
+Clinical Diagnosis Entry &amp; Severity Badging
+Role: ClinicianICD-10: J45.9 (Asthma)Severity: Medium
+1. Log in as a Clinician.2. Go to /dashboard/diseases/new.3. Fill in code, description, select patient, and submit.
+Diagnosis is recorded. Patient's diagnostic counter increments by 1. System displays a medium-severity visual badge.
+Record created. Connected patient displays "1 Diagnosis". Badge renders with yellow warning styles.
+PASS
+TC-006
+Search &amp; Filters Responsiveness
+Search Query: "Cardio"Dept. Filter: "Cardiology"
+1. Go to Doctor Directory.2. Type "Cardio" in Search.3. Filter by "Cardiology" department.
+List dynamically filters records to match both criteria concurrently using case-insensitive SQL/NoSQL parameters.
+Filter complete. Only cardiologists matching keyword "Cardio" are displayed.
+PASS
+TC-007
+Doctor Registry Management (Admin Only)
+Role: AdministratorAction: Delete a doctor record
+1. Log in as Admin.2. Open Doctor Directory.3. Click "Delete" on inactive profile.
+Prompt triggers, record is removed from MongoDB database, and patient counts update.
+Record successfully deleted and table instantly re-rendered.
+PASS
+Summary:
+A. Database Constraint Verification (MongoDB via Prisma)
+Unique Constraints: Tested duplicate registrations on User.email. Registering an existing email triggers a validation error, preventing account duplication.
+Cascading Relations: Validated that Patient records correctly hold a reference to their assigned Doctor via the doctorId MongoDB Object ID relation.
+B. Security Boundary Verification
+Server-Side Protection: Route-level restrictions in app/dashboard/ routes utilize auth.ts server sessions. If a user bypasses client-side buttons, server-side checks immediately throw redirect/unauthorized flags.
+Component-Level Protection: UI elements like + Add doctor, Edit, and Delete are dynamically rendered conditionally based on canManageDoctors(role) helper flags, minimizing accidental input vectors.
+Compatibility testing
+Browser
+Rendering Engine
+OS Tested
+Verified Features
+Layout / CSS Status
+Auth / Redirection Status
+Status
+Google Chrome (v120+)
+Blink
+Windows 11, macOS, Android
+CSS Flexbox/Grid, NextAuth flows, Form validation
+Perfect
+Normal
+PASS
+Mozilla Firefox (v118+)
+Gecko
+Windows 11, Ubuntu Linux
+HTML5 Form controls, CSS custom variables
+Perfect
+Normal
+PASS
+Apple Safari (v17+)
+WebKit
+macOS Sonoma, iOS 17
+HSL Color gradients, session storage, cookie handling
+Perfect
+Normal
+PASS
+Microsoft Edge (v120+)
+Blink
+Windows 10/11
+Table wrapping, dashboard metrics, hover effects
+Perfect
+Normal
+PASS
+Mobile Chrome / Safari
+Blink / WebKit
+iOS, Android
+Touch-responsive inputs, collapsing sidebars
+Adaptive (collapses smoothly)
+Normal
+PASS
+Responsiveness
+Device Type
+Target Resolution
+Breakpoint Config
+Layout Adjustments &amp; Behavioral Changes
+Status
+Large Desktop
+1920 x 1080 and wider
+xl:, 2xl:
+* Full two-column sidebar layout.* Multi-column patient and doctor directories display complete grids (Name, Specialty, Department, Contact, Actions).
+PASS
+Laptop / Tablet (Landscape)
+1024 x 768 to 1280 x 800
+md:, lg:
+* Navigation elements collapse to compact icon/text bars.* Metrics cards wrap from a 4-column layout to a 2x2 grid.
+PASS
+Tablet (Portrait)
+768 x 1024
+sm:
+* Secondary details (like emails or address fields in tables) collapse to sub-text rows under the primary name row to prevent horizontal overflow.
+PASS
+Mobile Devices
+375 x 667 to 428 x 926
+Default mobile-first
+* Core sidebar navigation collapses into a responsive overlay or bottom-docked navigation bar.* Grid columns collapse to single-column lists.* Table data wraps inside mrmsTableWrap to support smooth horizontal swipe behavior on touch interfaces.
+PASS
+C.M3 - Optimize the MRMS to meet CareTrack Clinic’s client requirements based on testing results and user feedback.
+User Feedback, Fixes and Optimizations 
+Problem: This problem has appeared while users were using mobile phones, originally top bar had the action buttons but when in responsive mode side bar displayed those buttons instead of top bar. So there was a problem with CSS while working with viewports
+Fix:
+Problem: Dashboard page seems to be too crowded with text, and unnecessary distractions, so for that reason I had to clean up and delete some of the content from the dashboard page.
+Fix: 
+Problem: The problem with this page is amount of content it’s currently displaying. When theres too much data(doctors, patients, diseases) coming from database, it consumes too much internet, also it makes  the website slow down.
+Fix: Pagination
+Problem: Devices with smaller than 400px had problem with responsiveness at the topbar/header. Logo title was taking up too much space, causing other elements to crush and break.
+Fix: Replaced the logo title with SVG icon after viewport gets smaller than 400px
+ACTIVITY 5  learning aim B and C. C.P6, BC.D2, BC.D3
+C.P6 – Review the extent to which the MRMS meets CareTrack Clinic’s client requirements
+CareTrack Clinic commissioned MediCore Solutions to replace paper records and disconnected spreadsheets with a web-based Medical Record Management System (MRMS). After completing design, development, testing and optimisation, I reviewed the final system against the original brief to judge how far it meets those needs.
+The core functional requirements are largely met. The system supports full CRUD for doctors (name, specialty, department, contact details), patients (personal details and assigned doctor), and diseases/diagnoses (ICD code, description, severity and linked patient). The data model follows the required relationships: one doctor can have many patients, each patient belongs to one doctor, and each patient can have many diagnosis records. The patient profile page shows the assigned doctor and all linked diagnoses together, which was a key client requirement and removes the need to check multiple files or sheets.
+Search and filter across doctors, patients and diseases are implemented, so staff can locate records quickly during busy clinic hours. Role-based access matches the scenario: administrators have full access including doctor management and settings; clinicians can view and update patient and disease records; receptionists can register new patients and view doctor information without access to change clinical diagnosis data they are not responsible for. Testing in Activity 4 confirmed that restricted roles cannot perform actions outside their permissions.
+Some requirements from the wider scenario are only partly addressed. The brief also refers to referral management, after-hours emergency contact, appointment scheduling and fuller diagnosis reporting. The MRMS focuses on secure record management, registration and clinical data linking rather than every optional service CareTrack listed. For a first release this is acceptable, but the clinic would need further development if they expect the system to cover referrals and advanced reporting from day one.
+Evidence from earlier activities supports this review. Activity 1 research showed what larger clinic systems offer; Activities 2 and 3 designs mapped screens and the ERD to client needs; Activity 4 testing and feedback documented fixes and improvements. Screenshots of CRUD operations, role tests and before/after changes show that requirements were tested, not only assumed. Overall, the MRMS meets the main client requirements for digital record management and role-based staff access, with clear scope for future features where the brief goes beyond the current build.
+BC.D2 – Evaluate design decisions and the optimised MRMS against client requirements (user needs and fitness for purpose)
+Design decisions were made to keep the system understandable for clinical staff, administrators and receptionists rather than optimised only for developers. Wireframes from Activity 2 covered the doctor list, patient profile, disease management and dashboard so each role had a clear entry point. The ERD and data dictionary defined doctor, patient and disease entities with the correct one-to-many links, which guided the database structure in development and reduced the risk of orphaned or inconsistent records.
+Visual design used a simple layout with consistent navigation, clear headings and forms labelled in everyday language (e.g. specialty, severity, assigned doctor). Feedback in Activity 3 highlighted areas such as making actions more obvious and improving readability on smaller screens; those points were addressed in the final build through layout adjustments and clearer feedback messages after save or error actions. Not every suggestion was applied—some ideas would have added complexity without clear benefit for CareTrack’s daily workflow—but changes that improved usability for non-technical users were prioritised.
+Technical choices were evaluated against fitness for purpose. A full stack approach with Next.js, API routes, Prisma and MongoDB allowed secure server-side handling of data and permissions. Compared with a spreadsheet or a generic booking app, this stack enforces relationships in the database and controls access through login roles, which better suits a clinic handling sensitive patient data. Compared with enterprise systems such as Epic or Cerner, the custom MRMS is smaller and easier to adapt when CareTrack requests changes, though it lacks deep hospital-wide features those products provide.
+Optimisation after testing strengthened fitness for purpose. Compatibility checks on different browsers and devices showed the interface remained usable on desktop and tablet, which matters for staff moving between reception and consultation rooms. Usability feedback led to refinements such as clearer validation messages when required fields were missing and more logical flow from list views to detail and edit screens. Functionality testing of all CRUD paths and role restrictions confirmed the optimised version behaved reliably before this final evaluation.
+The system appeals to its target audience because each role sees relevant tasks without unnecessary clutter. Administrators get full management capability; clinicians focus on patients and diagnoses; receptionists can register patients and check doctor details without exposure to settings they do not need. Against CareTrack’s requirements, the design and optimised MRMS are fit for purpose as a first digital record system, with known gaps (reporting, referrals, appointments) documented honestly rather than overstated.
+BC.D3 – Individual responsibility, creativity and effective self-management in design, development and review
+Throughout the project I took responsibility for my own work, as required by the brief. I completed research, designs, development and testing independently, kept authentication evidence accurate, and did not share assignment materials with other learners. I organised work across Activities 1–5 so that design informed development and testing informed optimisation, rather than leaving everything to the final development block.
+Self-management was important because Activity 4 had the largest time allocation. I planned tasks in a logical order: database schema and models first, then API routes and CRUD, then role-based access, then front-end pages and dashboard, then test plans and user feedback. When tests failed or users reported confusion, I recorded the issue, fixed the specific problem and retested rather than making random changes. Keeping before and after screenshots and notes on what changed helped demonstrate responsibility during review and made this evaluation easier to support with real evidence.
+Creativity appeared in how the solution was tailored to CareTrack rather than copied from a generic template. The branding and landing content explained MediCore’s relationship with CareTrack Clinic; the dashboard summarised counts and recent patients useful to administrators; patient profiles combined doctor and diagnosis information in one view. Design alternatives considered in Activity 2 (e.g. different dashboard layouts or navigation patterns) showed creative thinking about user needs before committing to one approach justified in Activity 3.
+My skills and behaviours affected outcomes in practical ways. Stronger areas included implementing relational data and API endpoints, and applying feedback from peers or tutors to improve screens. Weaker areas included estimating time for polish and documentation—I sometimes left written justification until after coding, which meant catching up at the end of Activity 4. If repeating the unit, I would test each feature as soon as it was built and schedule a short mid-development review with a test user, not only at the end.
+Personal performance also improved through the unit. I became more confident linking front-end forms to backend validation and role checks. Explaining design decisions to others in Activity 3 improved communication skills relevant to working with a real client. Taking ownership of errors found in testing (e.g. permission edge cases or form validation) and fixing them systematically showed professional behaviour expected of a junior developer at MediCore Solutions.
+In summary, individual responsibility, creative problem-solving and structured self-management contributed directly to a working MRMS that CareTrack can review, use and extend. The evaluation in C.P6 and BC.D2 is grounded in that process—not only in what the final build looks like, but in how it was designed, tested, improved and reviewed with discipline across the whole assignment.
+Conclusion
+The MRMS successfully delivers the clinic’s priority needs: digital doctor, patient and diagnosis records, correct linking, search, role-based security and a usable interface for different staff roles. Design and optimisation choices support those goals and remain appropriate for a mid-sized private clinic. Honest limitations (extra services, advanced reporting, referrals) show where the project could grow next. Together, the evidence from all activities supports the conclusion that the solution is a credible first full stack release for CareTrack Clinic, produced through responsible and reflective practice across the full project lifecycle.

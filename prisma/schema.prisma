@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("Receptionist")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Doctor {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  specialty  String
+  department String
+  email      String
+  phone      String
+  patients   Patient[]
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Patient {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  firstName   String
+  lastName    String
+  dateOfBirth DateTime?
+  email       String?
+  phone       String?
+  address     String?
+  doctorId    String    @db.ObjectId
+  doctor      Doctor?   @relation(fields: [doctorId], references: [id])
+  diseases    Disease[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Disease {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  icdCode     String
+  description String
+  severity    String
+  patientId   String   @db.ObjectId
+  patient     Patient  @relation(fields: [patientId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

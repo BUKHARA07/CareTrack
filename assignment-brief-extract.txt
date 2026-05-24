@@ -1,0 +1,154 @@
+﻿BTEC Assignment Brief
+Qualification
+Pearson BTEC International Level 3 Subsidiary Diploma, Foundation Diploma, Diploma, Extended Diploma.
+Unit number and title
+Information Technology
+Unit 25: Full Stack Development Pearson Set Assignment Brief
+Learning aim(s) 
+(For NQF only)
+A - Explore tools and technologies for full stack development.
+B - Design a full stack solution for an identified client
+C - Develop a full stack solution for an identified client
+Assignment title
+Investigate, Design and Develop a Full Stack Medical Record Management System
+Assessor
+Mirzoulugbek Yusupov
+Issue date
+Hand in deadline   
+Instructions to Teachers and Tutors
+The Pearson Set Assignment will be assessed internally by the centre using the unit assessment criteria detailed in the qualification specification. The Pearson Set Assignment will be sampled by the Standards Verifier as part of the standards verification annual centre visit.
+Conditions of supervision
+The Pearson Set Assignment should be undertaken in conditions that assure the authenticity of outcome. This may require supervision.
+It is recommended that the Pearson Set Assignment is completed in sessions totalling 20 hours. The assignment must not be shared with learners prior to the start of the assessment period. Teachers/tutors are responsible for the security of the assignment materials.
+Outcomes for submission
+Learners must complete this set assignment on a computer using suitable office productivity software and web development environments. All work must be clearly identifiable as the learner’s own work. Each learner must complete an authentication sheet.
+Instructions to Learners
+Read the Set Assignment Information and Set Assignment carefully.
+You will be asked to carry out specific activities under supervised conditions using the information provided.
+At all times you must work independently and must not share your work with other learners.
+Vocational Scenario or Context
+You are working as a junior full stack developer at MediCore Solutions -an emerging healthcare software company that specialises in building digital systems for clinics, hospitals, and private medical practices.
+MediCore Solutions has been commissioned by CareTrack Clinic -a mid-sized private medical centre with multiple specialist departments -to build a web-based Medical Record Management System (MRMS). The clinic currently relies on paper-based records and disconnected spreadsheets, which cause delays, data errors and difficulties in tracking patient histories across departments.
+Before development begins, the technical director has asked you to first research and evaluate the tools and technologies used in full stack healthcare systems, then design and build the MRMS solution for CareTrack Clinic.
+The MRMS must allow clinic staff to:
+Create, view, update and delete Doctor profiles -name, specialty, department and contact details
+Create, view, update and delete Patient records -personal details and their assigned doctor
+Create, view, update and delete Disease/Diagnosis records -ICD code, description, severity and the linked patient
+View a full Patient profile showing their assigned Doctor and all linked Disease/Diagnosis records
+Search and filter across Doctors, Patients and Diseases
+Access the system with role-based permissions: Administrators have full access; Clinicians can view and update Patient and Disease records only
+The data model must reflect the following relationships:
+A Doctor can have many Patients
+A Patient is assigned to one Doctor
+A Patient can have many Disease/Diagnosis records
+A Disease/Diagnosis belongs to one Patient
+Set Assignment Information
+CareTrack Clinic provides a range of medical services across multiple specialist departments. The company wants a system that allows staff to:
+Understand which doctors are available and manage their profiles
+View and manage patient records and their assigned doctors
+Record and track disease/diagnosis histories linked to patients
+Submit and process new patient registrations
+Access and update general clinical information
+Generate and review patient diagnosis reports
+Services offered:
+General practice consultations
+Specialist doctor appointments (cardiology, neurology, dermatology, orthopaedics)
+Diagnostic services (blood tests, imaging, ECG)
+Disease and diagnosis recording and management
+Patient history tracking across departments
+After-hours emergency contact service
+Referral management between departments
+Staff roles and access levels:
+Administrator - full access to all Doctor, Patient and Disease records plus system settings
+Clinician - view and update Patient and Disease/Diagnosis records only
+Receptionist - register new Patients and view Doctor schedules
+Set Assignment
+You must complete ALL activities.
+ACTIVITY 1 – suggested time 2 hours
+The directors of CareTrack Clinic are eager to have a high-quality medical record management system and have asked you to provide them with information about how other similar systems meet the needs of their organisations and users.
+You should research two existing healthcare or clinic management systems that have a similar purpose and/or operate in a similar area.
+You must:
+compare the design and features of the two identified systems
+consider the suitability of the systems’ features and design for the intended purpose and audience (clinical staff, administrators, receptionists)
+analyse how full stack development principles are used in each system
+provide a supported evaluation of how well each system meets the needs of the users and the organisation
+You should consider any positive or negative aspects of the two systems. Use specific examples to support the points you make in your report.
+This activity covers learning aim A. A.P1, A.M1, A.D1
+ACTIVITY 2 – suggested time 4 hours
+The client would like to see some initial designs for the system before you start developing it.
+Create comprehensive designs for the MRMS which include:
+identification of user requirements
+visual designs for the key screens (Doctor list, Patient profile, Disease/Diagnosis management, Dashboard)
+alternative design options
+technical documentation including an ERD and data dictionary
+You should use the Set Assignment Information and what you learned through your research in Activity 1 to inform your designs.
+This activity covers learning aim B. B.P2
+ACTIVITY 3 – suggested time 2 hours
+You now need to seek feedback in order to improve the quality and appropriateness of your designs. 
+You must:
+show your designs to others
+gather and analyse the feedback you receive
+identify areas of the designs that could be improved
+further develop/improve your designs using the feedback given
+You must provide justification of your design decisions, including how you responded to any feedback you received. 
+You should include:
+how the designs will meet user needs and be fit for purpose
+consideration of alternative design options
+which suggested changes you made, which you didn’t and why
+This could be in the form of annotations on the designs or as an additional piece of written evidence.
+This activity covers learning aim B. B.P3, B.M2
+ACTIVITY 4 – suggested time 10 hours
+You must now develop the MRMS for the client.
+During the development of the system you must:
+create the full stack application using suitable tools and technologies
+implement Doctor CRUD, Patient CRUD and Disease/Diagnosis CRUD with correct relational data linking all three entities
+implement role-based access control for Administrators and Clinicians
+use appropriate test plans, test schedules and data to test the system for functionality, compatibility (with different devices and browsers) and usability (including user testing)
+You must also seek feedback in order to improve the quality and appropriateness of your system. 
+You must:
+show your system to others
+gather and analyse the feedback you receive
+identify areas of the system that could be improved
+further develop/improve your system using the feedback given
+During testing and feedback activities you should collect any results and feedback you have received and document how you have responded to any problems or errors identified. 
+This evidence should include:
+‘before’ and ‘after’ versions of the system showing notable changes made during development
+details of how the system has been ‘optimised’ based on results of testing and user feedback
+This activity covers learning aim C. C.P4, C.P5, C.M3
+ACTIVITY 5 – suggested time 2 hours
+The development of the system is now complete and you need to review the extent to which the project meets the client’s needs.
+Write an evaluation of the design, development and optimisation of the MRMS. 
+Your evaluation must:
+consider how effectively the system: 
+meets CareTrack Clinic’s requirements
+appeals to and meets the needs of the target audience (clinical staff, administrators, receptionists)
+achieves its stated purpose
+compare features of the final system with other solutions that could have been used
+provide a detailed and balanced evaluation of what the system does well and areas for improvement
+review your own skills, performance and behaviours and the impact that this had on the development of the final system
+Your evaluation should be supported by evidence from all stages of the project to reach conclusions and suggest developments.
+This activity covers learning aims B and C. C.P6, BC.D2, BC.D3
+Checklist of evidence required
+Learners must submit the following evidence to support assessment of this assignment:
+Completed final report - A structured report covering all required activities, written in clear and professional language, demonstrating understanding of full stack development principles applied to the MRMS.
+Written report of analysis results - A detailed written analysis presenting findings from research into existing healthcare management systems, design decisions, testing outcomes, and evaluation activities.
+Evidence of data preparation and refinement - Screenshots showing the preparation, organisation and refinement of information used during the project (e.g. database schema setup, seed data, test plans, CRUD operation testing, optimisation steps).
+Client-focused report - A clear and concise report prepared for CareTrack Clinic management, explaining the MRMS solution, its key features - including Doctor, Patient and Disease/Diagnosis management - and how all client requirements have been met.
+Learning Aim A: Explore tools and technologies for full stack development
+A.P1 - Compare the full stack tools and technologies used in two different healthcare management systems, considering their suitability for the intended users and organisational purpose.
+A.M1 - Analyse how full stack development tools and technologies are used to create efficient, high-performance medical record management systems that meet client requirements.
+A.D1 - Evaluate how full stack development tools and technologies are applied in the design and deployment of high-performance medical record management systems that meet client requirements.
+Learning Aim B: Design a fullstack solution to meet client
+requirements
+B.P2 - Produce full stack designs for the MRMS that meet CareTrack Clinic’s client requirements, including ERD, data dictionary, wireframes and technical documentation.
+B.P3 - Review the MRMS design proposals with others to identify and inform improvements.
+B.M2 - Justify design decisions for the MRMS, explaining how they meet user needs and are fit for purpose in a clinical environment.
+BC.D2 - Evaluate design decisions and the optimised MRMS against CareTrack Clinic’s client requirements, explaining how they meet user needs and are fit for purpose.
+Learning Aim C - Develop a fullstack solution to meet client requirements
+C.P4 - Produce a full stack MRMS for an intended audience and test it for functionality, compatibility, usability and purpose.
+C.P5 - Test the MRMS for functionality and usability, including Doctor, Patient and Disease/Diagnosis CRUD operations and role-based access control.
+C.M3 - Optimise the MRMS to meet CareTrack Clinic’s client requirements based on testing results and user feedback.
+C.P6 - Review the extent to which the MRMS meets CareTrack Clinic’s client requirements.
+BC.D3 - Demonstrate individual responsibility, creativity and effective self-management in the design, development and review of the MRMS.
+Sources of information to support you with this Assignment
+Other assessment materials attached to this Assignment Brief
